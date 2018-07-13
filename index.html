@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Zellet Shop</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="icon" href="assets/media/images/logo.png">
+	<!-- AngularJs -->
+	<script src="node_modules/angular/angular.js"></script>
+	<!-- AngularRouter-->
+	<script src="node_modules/angular-route/angular-route.js"></script>
+	<!-- Angular FileUpload -->
+	<script src="node_modules/angular-file-upload/dist/angular-file-upload.js"></script>
+	<!-- Google Muli Font -->
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/index.css">
+	<link rel="stylesheet" href="assets/css/fonts/index.css">
+	<link rel="stylesheet" href="assets/css/headings/index.css">
+	<link rel="stylesheet" href="assets/css/colors/index.css">
+	<link rel="stylesheet" href="assets/css/text-colors/index.css">
+	<link rel="stylesheet" href="assets/css/paddinner/index.css">
+	<link rel="stylesheet" href="assets/css/containers/index.css">
+	<link rel="stylesheet" href="assets/css/flex/index.css">
+	<link rel="stylesheet" href="assets/css/forms/index.css">
+	<link rel="stylesheet" href="assets/css/buttons/index.css">
+	<!-- Devices Stylesheet -->
+	<link rel="stylesheet" href="assets/devices.css/dist/devices.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" ng-app="core">
+		<header class="container" ng-controller="searchControl">
+			<app-search info="title"></app-search>
+		</header>
+	</div>
+	<!-- Directives -->
+	<script src="assets/js/directives/app-search/index.js"></script>
+	<!-- Controllers -->
+	<script src="assets/js/controllers/searchController/index.js"></script>
+</body>
+</html>
