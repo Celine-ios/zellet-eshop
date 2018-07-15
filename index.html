@@ -29,15 +29,15 @@
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
-<body>
-	<div class="container" ng-app="core">
-		<header class="container" ng-controller="searchControl">
-			<app-search info="title"></app-search>
-		</header>
+<body ng-app="core">
+	<div class="container">
+	<ng-view></ng-view>
 	</div>
 	<!-- Directives -->
 	<script src="assets/js/directives/app-search/index.js"></script>
 	<!-- Controllers -->
 	<script src="assets/js/controllers/searchController/index.js"></script>
+	<!-- Routes -->
+	<script src="assets/js/routes/index.js"></script>
 </body>
 </html>
