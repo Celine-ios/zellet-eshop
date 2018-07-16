@@ -2,21 +2,63 @@
 	<app-search info="title"></app-search>
 </header>
 <main class="container flex flex-row">
-	<aside class="container-2">
-		
+	<aside class="container-2 flex flex-col">
+		<div class="pd-4 flex flex-col flex-start option">
+			<span class="form-font t-grey">
+				<a href="#"><i class="fas fa-bookmark"></i> Categorías</a>
+			</span>
+		</div>
+		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
+		<div class="pd-4 flex flex-col flex-start option">
+			<span class="form-font t-grey">
+				<a href="#"><i class="fas fa-heart"></i> Favoritos</a>
+			</span>
+		</div>
+		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
+		<div class="pd-4 flex flex-col flex-start option">
+			<span class="form-font t-grey">
+				<a href="#"><i class="fas fa-medal"></i> Más vendidos</a>
+			</span>
+		</div>
+		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
+		<div class="pd-4 flex flex-col flex-start option">
+			<span class="form-font t-grey">
+				<a href="#"><i class="fas fa-heart"></i> Etc</a>
+			</span>
+		</div>
+		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
+		<div class="pd-4 flex flex-col flex-start option">
+			<span class="form-font t-grey">
+				<a href="#"><i class="fas fa-heart"></i> Holaaa</a>
+			</span>
+		</div>
+		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
+		<div class="pd-4 flex flex-col flex-start option">
+			<span class="form-font t-grey">
+				<a href="#"><i class="fas fa-heart"></i> Holaaa</a>
+			</span>
+		</div>
 	</aside>
 	<section class="container-8 grey" ng-controller="productsControl">
 		<div class="mg-4 grid grid-4">
-			<article class="item" ng-repeat="product in products">
-				<div class="container">
-					<!-- Image -->
+			<article class="item flex flex-col" ng-repeat="product in products">
+				<div class="container-1x flex flex-center" style="margin: 4% 0%;">
+					<img ng-src="{{product.img}}" alt="producto" class="img-product">
 				</div>
-				<hr style="border: 0.2px solid #eee;margin: 4% 2%;">
-				<div class="container">
-					<!-- Presentation -->
+				<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
+				<div id="description" class="mg-6 flex flex-col flex-start" style="text-align: left;">
+					<h2 class="base-font t-black" style="margin-top: 0;font-size: 1rem;">{{product.name}} <br>
+						<small class="t-grey">{{product.bs_price}} BsS.</small>
+					</h2>
+					<span class="form-font t-coral">{{product.price | currency}}</span>
 				</div>
+				<footer class="container-1x flex flex-start" style="margin-left: 6%;">
+					<span class="base-font t-coral">Zellet</span>
+				</footer>
 			</article>
 		</div>
 	</section>
 </main>
+<app-footer></app-footer>
+
 
