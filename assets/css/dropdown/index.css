@@ -1,0 +1,5 @@
+.dropdown {
+	visibility: hidden;
+	height: 0em;
+	transition: all .3s;
+}
