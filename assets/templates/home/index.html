@@ -2,67 +2,15 @@
 	<app-search info="title"></app-search>
 </header>
 <main class="container flex flex-row">
-	<aside class="container-2 flex flex-col" ng-controller="dropdownControl">
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a ng-click="drop();"><i class="fas fa-bookmark"></i> Categorías</a>
-			</span>
-		</div>
-		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
-		<!-- DropDown -->
-		<div class="dropdown">
-			<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-tshirt"></i> Ropa</a>
-			</span>
-		</div>
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-mobile"></i> Electrodomésticos</a>
-			</span>
-		</div>
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-paper-plane"></i> Otros</a>
-			</span>
-		</div>
-		</div>
-		<!-- /DropDown -->
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-heart"></i> Favoritos</a>
-			</span>
-		</div>
-		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-medal"></i> Más vendidos</a>
-			</span>
-		</div>
-		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-piggy-bank"></i> Ofertas</a>
-			</span>
-		</div>
-		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-bug"></i> Reclamos</a>
-			</span>
-		</div>
-		<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
-		<div class="pd-4 flex flex-col flex-start option">
-			<span class="form-font t-grey">
-				<a href="#"><i class="fas fa-child"></i> Nosotros</a>
-			</span>
-		</div>
-	</aside>
-	<section class="container-8 grey" ng-controller="productsControl">
+	<app-sidebar style="width: 15%;"></app-sidebar>
+	<section class="container-9 grey" ng-controller="productsControl">
 		<div class="mg-4 grid grid-4">
-			<article class="item flex flex-col" ng-repeat="product in products">
+			<article class="item flex flex-col" ng-repeat="product in products" ng-mouseover="setButton($event);"  ng-mouseout="hideButton($event);">
+				<div class="container-1x flex flex-center checkout">
+					<button class="btn btn-orange">Revisar</button>
+				</div>
 				<div class="container-1x flex flex-center" style="margin: 4% 0%;">
-					<img ng-src="{{product.img}}" alt="producto" class="img-product">
+					<img ng-src="{{product.img}}" alt="producto" class="img-product" style="margin-top: -15%;">
 				</div>
 				<hr style="border: 0.2px solid #eee;margin: 4% 4% 0% 4%;">
 				<div id="description" class="mg-6 flex flex-col flex-start" style="text-align: left;">
